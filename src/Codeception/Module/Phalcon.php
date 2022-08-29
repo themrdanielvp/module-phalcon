@@ -683,7 +683,7 @@ class Phalcon extends Framework implements ActiveRecord, PartedModule
      *
      * @return array
      */
-    protected function getInternalDomains()
+    protected function getInternalDomains(): array
     {
         $internalDomains = [$this->getApplicationDomainRegex()];
 
