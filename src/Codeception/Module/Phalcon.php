@@ -90,7 +90,7 @@ use Phalcon\Mvc\Url;
  */
 class Phalcon extends Framework implements ActiveRecord, PartedModule
 {
-    protected $config = [
+    protected array $config = [
         'bootstrap'  => 'app/config/bootstrap.php',
         'cleanup'    => true,
         'savepoints' => true,
