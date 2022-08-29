@@ -205,6 +205,7 @@ class Phalcon extends Framework implements ActiveRecord, PartedModule
     public function _after(TestInterface $test)
     {
         if ($this->config['cleanup'] && isset($this->di['db'])) {
+            var_dump($this->di['db']); exit;
             while ($this->di['db']->isUnderTransaction()) {
                 $level = $this->di['db']->getTransactionLevel();
                 try {
