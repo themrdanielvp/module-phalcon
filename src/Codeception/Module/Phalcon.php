@@ -11,7 +11,7 @@ use Codeception\Lib\Interfaces\PartedModule;
 use Codeception\TestInterface;
 use Codeception\Util\ReflectionHelper;
 use PDOException;
-use Phalcon\Di;
+use Phalcon\Di\Di;
 use Phalcon\Di\Injectable;
 use Phalcon\DiInterface;
 use Phalcon\Mvc\Model as PhalconModel;
