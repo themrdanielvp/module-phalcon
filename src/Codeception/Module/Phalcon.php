@@ -373,7 +373,7 @@ class Phalcon extends Framework implements ActiveRecord, PartedModule
      * @param array  $attributes Model attributes
      * @part orm
      */
-    public function seeRecord($model, $attributes = [])
+    public function seeRecord(string $model, array $attributes = []): void
     {
         $record = $this->findRecord($model, $attributes);
         if (!$record) {
