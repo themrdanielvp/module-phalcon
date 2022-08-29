@@ -224,7 +224,7 @@ class Phalcon extends Framework implements ActiveRecord, PartedModule
         $_SESSION = $_FILES = $_GET = $_POST = $_COOKIE = $_REQUEST = [];
     }
 
-    public function _parts()
+    public function _parts(): array
     {
         return ['orm', 'services'];
     }
