@@ -1,5 +1,5 @@
 {
-    "name":"codeception/module-phalcon",
+    "name":"themrdanielvp/module-phalcon",
     "description":"Codeception module for Phalcon framework",
     "keywords":["codeception", "phalcon"],
     "homepage":"https://codeception.com/",
@@ -14,7 +14,7 @@
     "require": {
         "php": ">=5.6.0 <8.2",
         "codeception/lib-innerbrowser": "dev-master | ^1.0",
-        "codeception/codeception": "^4.0"
+        "codeception/codeception": "^5.0"
     },
     "require-dev": {
         "codeception/module-asserts": "^1.0",
