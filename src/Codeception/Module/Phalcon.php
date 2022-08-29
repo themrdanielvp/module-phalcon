@@ -112,7 +112,7 @@ class Phalcon extends Framework implements ActiveRecord, PartedModule
      * Phalcon Connector
      * @var PhalconConnector
      */
-    public $client;
+    public $phalconClient;
 
     /**
      * HOOK: used after configuration is loaded
@@ -179,7 +179,7 @@ class Phalcon extends Framework implements ActiveRecord, PartedModule
 
         // localize
         $bootstrap = $this->bootstrapFile;
-        $this->client->setApplication(function () use ($bootstrap) {
+        $this->phalconClient->setApplication(function () use ($bootstrap) {
             $currentDi = Di::getDefault();
             /** @noinspection PhpIncludeInspection */
             $application = require $bootstrap;
@@ -237,7 +237,7 @@ class Phalcon extends Framework implements ActiveRecord, PartedModule
      */
     public function getApplication()
     {
-        return $this->client->getApplication();
+        return $this->phalconClient->getApplication();
     }
 
     /**
@@ -712,7 +712,7 @@ class Phalcon extends Framework implements ActiveRecord, PartedModule
      */
     private function getApplicationDomainRegex()
     {
-        $server = ReflectionHelper::readPrivateProperty($this->client, 'server');
+        $server = ReflectionHelper::readPrivateProperty($this->phalconClient, 'server');
         $domain = $server['HTTP_HOST'];
 
         return '/^' . str_replace('.', '\.', $domain) . '$/';
